@@ -6,7 +6,8 @@
     android:layout_margin="10dp"
     android:baselineAligned="false"
     android:drawSelectorOnTop="true"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:padding="10dp">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -26,8 +27,11 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center"
         android:layout_weight="4"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp">
 
         <TextView
             android:id="@+id/song_no"
@@ -44,5 +48,6 @@
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
+
 
 </LinearLayout>

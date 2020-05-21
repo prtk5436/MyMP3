@@ -106,29 +106,29 @@
             android:gravity="bottom"
             android:orientation="horizontal">
 
-            <ImageView
+            <Button
                 android:id="@+id/backward_arrow"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/backward_arrow" />
+                android:background="@drawable/backward_arrow"
+                android:contentDescription="@string/todo" />
 
-            <ImageView
+            <Button
                 android:id="@+id/play_pause"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/play_arrow" />
+                android:background="@drawable/play_arrow"
+                android:contentDescription="@string/todo" />
 
-            <ImageView
+            <Button
                 android:id="@+id/forward_arrow"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/forward_arrow" />
+                android:background="@drawable/forward_arrow"
+                android:contentDescription="@string/todo" />
         </LinearLayout>
     </LinearLayout>
 
