@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">MyMP3</string>
+
+    <string name="marathi_sairat">Sairat</string>
+    <string name="marathi_fandri">Fandri</string>
+    <string name="marathi_nal">Nal</string>
+    <string name="marathi_farzand">Farzand</string>
+    <string name="marathi_zapatlela">Zapatlela</string>
+    <string name="marathi_Dagdichal">Dagdichal</string>
+
+    <string name="animals_dog">Dog</string>
+    <string name="animals_cat">Cat</string>
+    <string name="animals_frog">Frog</string>
+    <string name="animals_bear">Bear</string>
+    <string name="animals_bird">Bird</string>
+    <string name="animals_chicken">Chicken</string>
+    <string name="animals_cow">Cow</string>
+    <string name="animals_cricket">Cricket</string>
+    <string name="animals_eagle">Eagle</string>
+    <string name="animals_horses">Horses</string>
+    <string name="animals_monkey">Monkey</string>
+    <string name="animals_owl">Owl</string>
+    <string name="animals_pig">Pig</string>
+    <string name="instruments_guitar">Guitar</string>
+    <string name="instruments_piano">Piano</string>
+    <string name="instruments_saxophone">Saxophone</string>
+    <string name="instruments_tambourine">Tambourine</string>
+    <string name="instruments_violin">Violin</string>
+    <string name="instruments_drums">Drums</string>
+    <string name="instruments_trumpet">Trumpet</string>
+    <string name="instruments_harp">Harp</string>
+    <string name="nature_thunderstorm">Thunderstorm</string>
+    <string name="nature_wave">Wave</string>
+    <string name="nature_night">Night in forest</string>
+    <string name="nature_jungle">Jungle</string>
+    <string name="nature_forest">Forest</string>
+    <string name="nature_ocean">Ocean</string>
+
+    <string name="marathi_songs">Marathi SONGS</string>
+    <string name="panjabi_songs">panjabi SONGS</string>
+    <string name="hindi_songs">HINDI SONGS</string>
+    <string name="english_songs">english SONGS</string>
+    <string name="todo">TODO</string>
+</resources>
