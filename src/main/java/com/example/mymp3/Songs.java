@@ -1,6 +1,7 @@
 package com.example.mymp3;
 
-public class Marathi {
+public class Songs {
+
     // String value
     private String mSong;
 
@@ -13,7 +14,7 @@ public class Marathi {
     /**
      * Constructs a new TextView with initial values for text and text color.
      */
-    public Marathi(String Name, String no, int imageResourceId) {
+    public Songs(String Name, String no, int imageResourceId) {
         mSong = Name;
         mSongNo = no;
         mImageResourceId = imageResourceId;

@@ -14,14 +14,14 @@ public class EnglishSongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song);
 
-        ArrayList<English> english = new ArrayList<English>();
+        ArrayList<Songs> english = new ArrayList<>();
 
-        english.add(new English(getString(R.string.nature_forest), "1", R.drawable.ic_play_circle_outline));
-        english.add(new English(getString(R.string.nature_jungle), "2", R.drawable.ic_play_circle_outline));
-        english.add(new English(getString(R.string.nature_night), "3", R.drawable.ic_play_circle_outline));
-        english.add(new English(getString(R.string.nature_ocean), "4", R.drawable.ic_play_circle_outline));
-        english.add(new English(getString(R.string.nature_thunderstorm), "5", R.drawable.ic_play_circle_outline));
-        english.add(new English(getString(R.string.nature_wave), "6", R.drawable.ic_play_circle_outline));
+        english.add(new Songs(getString(R.string.nature_forest), "1", R.drawable.ic_play_circle_outline));
+        english.add(new Songs(getString(R.string.nature_jungle), "2", R.drawable.ic_play_circle_outline));
+        english.add(new Songs(getString(R.string.nature_night), "3", R.drawable.ic_play_circle_outline));
+        english.add(new Songs(getString(R.string.nature_ocean), "4", R.drawable.ic_play_circle_outline));
+        english.add(new Songs(getString(R.string.nature_thunderstorm), "5", R.drawable.ic_play_circle_outline));
+        english.add(new Songs(getString(R.string.nature_wave), "6", R.drawable.ic_play_circle_outline));
 
 
         EnglishAdaptor englishAdaptor = new EnglishAdaptor(this, english);

@@ -40,5 +40,10 @@
     <string name="panjabi_songs">panjabi SONGS</string>
     <string name="hindi_songs">HINDI SONGS</string>
     <string name="english_songs">english SONGS</string>
+    <string name="song_no">song_no</string>
+    <string name="song_name">song_name</string>
+    <string name="sajda">Sajda</string>
+    <string name="rahat_fateh_ali_khan_shankaran_mahadevan_amp_richa_sharma"><![CDATA[Rahat Fateh Ali Khan, Shankaran Mahadevan & Richa Sharma]]></string>
+    <string name="my_name_is_khan">My Name is Khan</string>
     <string name="todo">TODO</string>
 </resources>

@@ -14,15 +14,15 @@ public class MarathiSongsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song);
 
-        ArrayList<Marathi> marathi = new ArrayList<Marathi>();
+        ArrayList<Songs> marathi = new ArrayList<>();
 
-        marathi.add(new Marathi(getString(R.string.marathi_Dagdichal), "1", R.drawable.nature_forest));
-        marathi.add(new Marathi(getString(R.string.marathi_fandri), "2", R.drawable.nature_jungle));
-        marathi.add(new Marathi(getString(R.string.marathi_farzand), "3", R.drawable.nature_night));
-        marathi.add(new Marathi(getString(R.string.marathi_nal), "3", R.drawable.nature_ocean));
-        marathi.add(new Marathi(getString(R.string.marathi_sairat), "4", R.drawable.nature_thunderstorm));
-        marathi.add(new Marathi(getString(R.string.marathi_zapatlela), "5", R.drawable.nature_wave));
-        marathi.add(new Marathi(getString(R.string.marathi_fandri), "6", R.drawable.nature_wind));
+        marathi.add(new Songs(getString(R.string.marathi_Dagdichal), "1", R.drawable.nature_forest));
+        marathi.add(new Songs(getString(R.string.marathi_fandri), "2", R.drawable.nature_jungle));
+        marathi.add(new Songs(getString(R.string.marathi_farzand), "3", R.drawable.nature_night));
+        marathi.add(new Songs(getString(R.string.marathi_nal), "3", R.drawable.nature_ocean));
+        marathi.add(new Songs(getString(R.string.marathi_sairat), "4", R.drawable.nature_thunderstorm));
+        marathi.add(new Songs(getString(R.string.marathi_zapatlela), "5", R.drawable.nature_wave));
+        marathi.add(new Songs(getString(R.string.marathi_fandri), "6", R.drawable.nature_wind));
 
         MarathiAdaptor marathiAdaptor = new MarathiAdaptor(this, marathi);
 

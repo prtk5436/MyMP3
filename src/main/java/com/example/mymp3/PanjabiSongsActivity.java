@@ -14,21 +14,21 @@ public class PanjabiSongsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song);
 
-        ArrayList<Panjabi> panjabi = new ArrayList<Panjabi>();
+        ArrayList<Songs> panjabi = new ArrayList<>();
 
-        panjabi.add(new Panjabi(getString(R.string.animals_bear), "1", R.drawable.animals_bear));
-        panjabi.add(new Panjabi(getString(R.string.animals_bird), "2", R.drawable.animals_bird));
-        panjabi.add(new Panjabi(getString(R.string.animals_cat), "3", R.drawable.animals_cat));
-        panjabi.add(new Panjabi(getString(R.string.animals_chicken), "3", R.drawable.animals_chicken));
-        panjabi.add(new Panjabi(getString(R.string.animals_cow), "4", R.drawable.animals_cow));
-        panjabi.add(new Panjabi(getString(R.string.animals_cricket), "5", R.drawable.animals_cricket));
-        panjabi.add(new Panjabi(getString(R.string.animals_dog), "6", R.drawable.animals_dog));
-        panjabi.add(new Panjabi(getString(R.string.animals_eagle), "7", R.drawable.animals_eagle));
-        panjabi.add(new Panjabi(getString(R.string.animals_frog), "8", R.drawable.animals_frog));
-        panjabi.add(new Panjabi(getString(R.string.animals_horses), "9", R.drawable.animals_horses));
-        panjabi.add(new Panjabi(getString(R.string.animals_monkey), "10", R.drawable.animals_monkey));
-        panjabi.add(new Panjabi(getString(R.string.animals_owl), "11", R.drawable.animals_owl));
-        panjabi.add(new Panjabi(getString(R.string.animals_pig), "12", R.drawable.animals_pig));
+        panjabi.add(new Songs(getString(R.string.animals_bear), "1", R.drawable.animals_bear));
+        panjabi.add(new Songs(getString(R.string.animals_bird), "2", R.drawable.animals_bird));
+        panjabi.add(new Songs(getString(R.string.animals_cat), "3", R.drawable.animals_cat));
+        panjabi.add(new Songs(getString(R.string.animals_chicken), "3", R.drawable.animals_chicken));
+        panjabi.add(new Songs(getString(R.string.animals_cow), "4", R.drawable.animals_cow));
+        panjabi.add(new Songs(getString(R.string.animals_cricket), "5", R.drawable.animals_cricket));
+        panjabi.add(new Songs(getString(R.string.animals_dog), "6", R.drawable.animals_dog));
+        panjabi.add(new Songs(getString(R.string.animals_eagle), "7", R.drawable.animals_eagle));
+        panjabi.add(new Songs(getString(R.string.animals_frog), "8", R.drawable.animals_frog));
+        panjabi.add(new Songs(getString(R.string.animals_horses), "9", R.drawable.animals_horses));
+        panjabi.add(new Songs(getString(R.string.animals_monkey), "10", R.drawable.animals_monkey));
+        panjabi.add(new Songs(getString(R.string.animals_owl), "11", R.drawable.animals_owl));
+        panjabi.add(new Songs(getString(R.string.animals_pig), "12", R.drawable.animals_pig));
 
         PanjabiAdaptor panjabiAdaptor = new PanjabiAdaptor(this, panjabi);
 
