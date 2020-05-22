@@ -4,6 +4,7 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -75,6 +76,7 @@ public class PanjabiSongsActivity extends AppCompatActivity {
                 Toast.makeText(PanjabiSongsActivity.this, "playing " + songNo + currentAlbumName, Toast.LENGTH_LONG).show();
                 int result = mAudioManager.requestAudioFocus(mAudioFocusChange, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
+                Log.v("PanjabiSongActivity", "Current album : " + currentAlbum);
                 if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
                     mediaPlayer = MediaPlayer.create(PanjabiSongsActivity.this, currentAlbum.getmSound());
                     mediaPlayer.start();

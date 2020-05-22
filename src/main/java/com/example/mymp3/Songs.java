@@ -55,4 +55,13 @@ public class Songs {
         return mSoundId;
     }
 
+    @Override
+    public String toString() {
+        return "Songs{" +
+                "mSoundId=" + mSoundId +
+                ", mSong='" + mSong + '\'' +
+                ", mSongNo='" + mSongNo + '\'' +
+                ", mImageResourceId=" + mImageResourceId +
+                '}';
+    }
 }

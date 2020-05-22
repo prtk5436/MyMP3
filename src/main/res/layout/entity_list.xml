@@ -49,5 +49,15 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/play"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:autofillHints="play"
+        android:background="@drawable/ic_play_circle_outline"
+        android:contentDescription="@string/todo" />
 
 </LinearLayout>
