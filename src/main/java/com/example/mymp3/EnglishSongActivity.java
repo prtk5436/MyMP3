@@ -1,17 +1,10 @@
 package com.example.mymp3;
 
-import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.ArrayList;
 
 public class EnglishSongActivity extends AppCompatActivity {
 
@@ -41,10 +34,14 @@ public class EnglishSongActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_song);
+        setContentView(R.layout.activity_category);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container, new EnglishFragment())
+                .commit();
+        /*setContentView(R.layout.activity_song);
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-
-        final ArrayList<Songs> english = new ArrayList<>();
+*/
+        /*final ArrayList<Songs> english = new ArrayList<>();
 
         english.add(new Songs(getString(R.string.nature_wave), "1", R.drawable.ic_play_circle_outline, R.raw.nature_wind));
         english.add(new Songs(getString(R.string.nature_jungle), "2", R.drawable.ic_play_circle_outline, R.raw.nature_jungle));
@@ -76,7 +73,7 @@ public class EnglishSongActivity extends AppCompatActivity {
                 }
             }
         });
-
+*/
     }
 
     @Override

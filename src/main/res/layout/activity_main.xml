@@ -20,7 +20,14 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <Button
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </ScrollView>
+    <!--<Button
                 android:id="@+id/hindi"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
@@ -55,8 +62,7 @@
                 android:shadowColor="#009688"
                 android:text="@string/english_songs"
                 android:textStyle="italic" />
-        </LinearLayout>
-    </ScrollView>
+        -->
 
     <LinearLayout
         android:id="@+id/l2"

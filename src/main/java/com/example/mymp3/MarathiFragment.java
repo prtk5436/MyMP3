@@ -1,12 +1,21 @@
 package com.example.mymp3;
 
+import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
-public class MarathiSongsActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class MarathiFragment extends Fragment {
 
 
     private MediaPlayer mediaPlayer;
@@ -31,16 +40,16 @@ public class MarathiSongsActivity extends AppCompatActivity {
         }
     };
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public MarathiFragment() {
+        // Required empty public constructor
+    }
 
-        setContentView(R.layout.activity_category);
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container, new MarathiFragment())
-                .commit();
-        /*setContentView(R.layout.activity_song);
-        mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.activity_song, container, false);
+        mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<Songs> marathi = new ArrayList<>();
 
@@ -52,9 +61,9 @@ public class MarathiSongsActivity extends AppCompatActivity {
         marathi.add(new Songs(getString(R.string.marathi_zapatlela), "5", R.drawable.nature_wave, R.raw.nature_wave));
         marathi.add(new Songs(getString(R.string.marathi_fandri), "6", R.drawable.nature_wind, R.raw.nature_wind));
 
-        MarathiAdaptor marathiAdaptor = new MarathiAdaptor(this, marathi);
+        MarathiAdaptor marathiAdaptor = new MarathiAdaptor(getActivity(), marathi);
 
-        ListView listView = findViewById(R.id.list_numbers);
+        ListView listView = rootView.findViewById(R.id.list_numbers);
 
         listView.setAdapter(marathiAdaptor);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -63,22 +72,22 @@ public class MarathiSongsActivity extends AppCompatActivity {
                 Songs currentAlbum = marathi.get(position);
                 String songNo = currentAlbum.getmSongNo();
                 String currentAlbumName = currentAlbum.getmSong();
-                Toast.makeText(MarathiSongsActivity.this, "playing " + songNo + currentAlbumName, Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "playing " + songNo + currentAlbumName, Toast.LENGTH_LONG).show();
                 int result = mAudioManager.requestAudioFocus(mAudioFocusChange, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
                 if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-                    mediaPlayer = MediaPlayer.create(MarathiSongsActivity.this, currentAlbum.getmSound());
+                    mediaPlayer = MediaPlayer.create(getActivity(), currentAlbum.getmSound());
                     mediaPlayer.start();
 
                     mediaPlayer.setOnCompletionListener(mCompletionListener);
                 }
             }
-        });*/
-
+        });
+        return rootView;
     }
 
     @Override
-    protected void onStop() {
+    public void onStop() {
         super.onStop();
         releaseMediaPlayer();
     }
@@ -91,4 +100,5 @@ public class MarathiSongsActivity extends AppCompatActivity {
             mAudioManager.abandonAudioFocus(mAudioFocusChange);
         }
     }
+
 }

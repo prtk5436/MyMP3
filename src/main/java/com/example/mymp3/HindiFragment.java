@@ -1,14 +1,21 @@
 package com.example.mymp3;
 
+import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
-public class HindiSongActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
-
+public class HindiFragment extends Fragment {
     private MediaPlayer mediaPlayer;
     private AudioManager mAudioManager;
     private AudioManager.OnAudioFocusChangeListener mAudioFocusChange = new AudioManager.OnAudioFocusChangeListener() {
@@ -31,17 +38,17 @@ public class HindiSongActivity extends AppCompatActivity {
         }
     };
 
+    public HindiFragment() {
+        // Required empty public constructor
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_category);
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container, new HindiFragment())
-                .commit();
-       /* setContentView(R.layout.activity_song);
-        mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-*/
-        /*final ArrayList<Songs> hindi = new ArrayList<>();
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.activity_song, container, false);
+        mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
+
+        final ArrayList<Songs> hindi = new ArrayList<>();
 
         hindi.add(new Songs(getString(R.string.instruments_guitar), "1", R.drawable.instruments_guitar, R.raw.instruments_guitar));
         hindi.add(new Songs(getString(R.string.instruments_piano), "2", R.drawable.instruments_piano, R.raw.instruments_piano));
@@ -53,9 +60,9 @@ public class HindiSongActivity extends AppCompatActivity {
         hindi.add(new Songs(getString(R.string.instruments_harp), "7", R.drawable.instruments_harp, R.raw.instruments_harp));
 
 
-        HindiAdaptor hindiAdaptor = new HindiAdaptor(this, hindi);
+        HindiAdaptor hindiAdaptor = new HindiAdaptor(getActivity(), hindi);
 
-        ListView listView = findViewById(R.id.list_numbers);
+        ListView listView = rootView.findViewById(R.id.list_numbers);
 
         listView.setAdapter(hindiAdaptor);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -64,22 +71,23 @@ public class HindiSongActivity extends AppCompatActivity {
                 Songs currentAlbum = hindi.get(position);
                 String songNo = currentAlbum.getmSongNo();
                 String currentAlbumName = currentAlbum.getmSong();
-                Toast.makeText(HindiSongActivity.this, "playing " + songNo + currentAlbumName, Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "playing " + songNo + currentAlbumName, Toast.LENGTH_LONG).show();
                 int result = mAudioManager.requestAudioFocus(mAudioFocusChange, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
                 if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-                    mediaPlayer = MediaPlayer.create(HindiSongActivity.this, currentAlbum.getmSound());
+                    mediaPlayer = MediaPlayer.create(getActivity(), currentAlbum.getmSound());
                     mediaPlayer.start();
 
                     mediaPlayer.setOnCompletionListener(mCompletionListener);
                 }
             }
         });
-*/
+
+        return rootView;
     }
 
     @Override
-    protected void onStop() {
+    public void onStop() {
         super.onStop();
         releaseMediaPlayer();
     }
@@ -92,4 +100,5 @@ public class HindiSongActivity extends AppCompatActivity {
             mAudioManager.abandonAudioFocus(mAudioFocusChange);
         }
     }
+
 }
