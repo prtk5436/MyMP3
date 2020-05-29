@@ -20,14 +20,7 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/viewpager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </LinearLayout>
-    </ScrollView>
-    <!--<Button
+            <Button
                 android:id="@+id/hindi"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
@@ -62,7 +55,10 @@
                 android:shadowColor="#009688"
                 android:text="@string/english_songs"
                 android:textStyle="italic" />
-        -->
+
+
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/l2"
@@ -106,6 +102,7 @@
 
 
         <LinearLayout
+            style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -114,6 +111,7 @@
 
             <Button
                 android:id="@+id/backward_arrow"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -122,6 +120,7 @@
 
             <Button
                 android:id="@+id/play_pause"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -130,6 +129,7 @@
 
             <Button
                 android:id="@+id/forward_arrow"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
